@@ -53,7 +53,7 @@ test('Upload Document via AP module', async ({page})=>{
   await initElements(page); 
   await login.login();
   await page.locator('.ant-avatar').first().click();
-  await page.locator('.ant-upload-select input[type="file"]').setInputFiles('C:\\Users\\luisa.alfonso\\Desktop\\Sample Documents - For Testing purposes\\OCR Samples\\U S A\\USA Invoices\\jetbrains Y2017_06.pdf');
+  await page.locator('.ant-upload-select input[type="file"]').setInputFiles('C:\\Users\\luisa.alfonso\\OneDrive - Softgic\\VisualStudio Projects\\automation-platform\\test-data\\test-docs\\jetbrains Y2017_06.pdf');
   await page.getByText('jetbrains Y2017_06').click();
   await page.locator('div').filter({ hasText: 'jetbrains Y2017_06' }).nth(3).click();
   await expect(page.locator('body')).toMatchAriaSnapshot(`
