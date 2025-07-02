@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"npx playwright test",
-    "report":"npx playwright show-report",
-    "test:tag": "npx playwright --grep @smoke"
+    "test": "npx playwright test",
+    "report": "npx playwright show-report",
+    "test:tag": "npx playwright test --grep '@smoke'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@playwright/test": "^1.53.2",
-    "@types/node": "^24.0.8"
+    "@types/node": "^24.0.8",
+    "allure-playwright": "^3.3.0"
   }
 }
