@@ -4,7 +4,7 @@ import { initElements } from '../../globalPageSetup.js';
 
 const documentTypes= ['Folio','Invoice','Purchase Order','Receipt','Utility Bill','Statement'];
 
-test.describe.parallel('Add new Line Items to each Document Type', () => {
+test.describe.parallel('[@smoke]Add new Line Items to each Document Type ', () => {
   documentTypes.forEach((documentType) =>{
     test(`Adding new line item to document type: ${documentType}`, async ({page}) => {
         await initElements(page); 
