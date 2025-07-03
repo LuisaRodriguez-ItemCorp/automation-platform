@@ -2,6 +2,10 @@ import { test, expect } from '@playwright/test';
 import { login, ap, page} from "../../globalPageSetup.js"
 import { initElements } from '../../globalPageSetup.js';
 
+test('Demo', async({page}) =>{
+  getByRole('heading', { name: 'All Documents' })
+} )
+
 test('Upload Document via Demo Module @smoke', async ({ page }) => {
   await page.goto('https://platform.itemize.dev/home/login');
   await page.getByRole('textbox', { name: '* Email' }).click();
