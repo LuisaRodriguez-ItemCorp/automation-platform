@@ -1,0 +1,78 @@
+# Page snapshot
+
+```yaml
+- text: Welcome to the Itemize Platform, Demo Account
+- button "logout":
+  - img "logout"
+- tablist:
+  - tab "AP" [selected]
+  - tab "REP Tool"
+- tabpanel "AP"
+- separator: Spend by Vendor
+- radio "Top 5" [checked]
+- text: Top 5
+- combobox
+- text: 3 Days
+- img: Apple Inc. 1402.29
+- tablist:
+  - tab "Costs by GL Code" [selected]
+  - tab "Costs by Division"
+  - tab "Costs by Spend Category"
+- tabpanel "Costs by GL Code":
+  - img "No data"
+  - text: No Payments found by GL Code
+- text: Documents Received 75
+- separator: Upcoming Payments
+- table:
+  - rowgroup:
+    - row "Vendor Document Number PO Number Amount Due Date Status":
+      - columnheader "Vendor"
+      - columnheader "Document Number"
+      - columnheader "PO Number"
+      - columnheader "Amount"
+      - columnheader "Due Date"
+      - columnheader "Status"
+      - cell
+- table:
+  - rowgroup:
+    - row "salesforce.com, inc. 20306490 NA 1236.07 2021-09-27 exclamation-circle UNPAID":
+      - cell "salesforce.com, inc."
+      - cell "20306490"
+      - cell "NA"
+      - cell "1236.07"
+      - cell "2021-09-27"
+      - cell "exclamation-circle UNPAID":
+        - img "exclamation-circle"
+        - text: UNPAID
+    - row "Varstrat and S INV0429519 3585 693.38 exclamation-circle UNPAID":
+      - cell "Varstrat and S"
+      - cell "INV0429519"
+      - cell "3585"
+      - cell "693.38"
+      - cell
+      - cell "exclamation-circle UNPAID":
+        - img "exclamation-circle"
+        - text: UNPAID
+- text: Your apps
+- img:
+  - img
+- strong: AP
+- img "user"
+- strong: Admin
+- img "file-search"
+- strong: Audit Tool
+- img "experiment"
+- strong: Demo
+- img:
+  - img
+- strong: DM
+- img "audit"
+- strong: Documents
+- img:
+  - img
+- strong: REP Tool
+- img:
+  - img
+- strong: Settings
+- tooltip "Click to sort ascending"
+```

@@ -1,0 +1,271 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - link:
+    - /url: /home
+    - img
+  - textbox "Search documents, vendors, etc."
+  - button "user-switch":
+    - img "user-switch"
+  - button "product":
+    - img "product"
+  - button "logout":
+    - img "logout"
+- main:
+  - navigation:
+    - list:
+      - listitem:
+        - link "home":
+          - /url: /home
+          - img "home"
+      - listitem: Settings
+      - listitem: Field Management
+      - listitem: Accounts Payable
+  - complementary:
+    - menu:
+      - menuitem "user Personal Profile":
+        - img "user"
+        - text: Personal Profile
+      - menuitem "lock Roles & Permissions":
+        - img "lock"
+        - text: Roles & Permissions
+      - menuitem "usergroup-add User Management":
+        - img "usergroup-add"
+        - text: User Management
+      - menuitem "deployment-unit Workflow Management":
+        - img "deployment-unit"
+        - text: Workflow Management
+      - menuitem "tags Tag Management":
+        - img "tags"
+        - text: Tag Management
+      - menuitem "unordered-list Attribute Management":
+        - img "unordered-list"
+        - text: Attribute Management
+      - menuitem "shop Vendor Management":
+        - img "shop"
+        - text: Vendor Management
+      - menuitem "layout Field Management" [expanded]:
+        - img "layout"
+        - text: Field Management
+      - menu:
+        - menuitem "Accounts Payable"
+        - menuitem "Demo"
+        - menuitem "Digital Mailroom"
+        - menuitem "REP Tool"
+        - menuitem "API"
+  - main:
+    - button "left Go Back":
+      - img "left"
+      - text: Go Back
+    - button "Cancel"
+    - button "Submit"
+    - heading "Edit Layout" [level=2]
+    - separator
+    - text: "* Name"
+    - textbox "* Name": Default Utility Bill
+    - text: Document Type
+    - combobox "Document Type"
+    - text: Utility_Bill * Layout
+    - img "question-circle"
+    - separator
+    - text: "* Main Container"
+    - textbox "* Main Container": Header
+    - text: Add Divider
+    - checkbox "Add Divider"
+    - text: Direction
+    - radiogroup "segmented control":
+      - radio "Horizontal" [checked]
+      - text: Horizontal
+      - radio "Vertical"
+      - text: Vertical
+    - text: Containers * Label
+    - textbox "* Label": Document
+    - text: Add Divider
+    - checkbox "Add Divider" [checked]
+    - text: Direction
+    - radiogroup "segmented control":
+      - radio "Horizontal"
+      - text: Horizontal
+      - radio "Vertical" [checked]
+      - text: Vertical
+    - text: Fields
+    - combobox
+    - text: document_type
+    - img "minus-circle"
+    - combobox
+    - text: source
+    - img "minus-circle"
+    - combobox
+    - text: bill_id
+    - img "minus-circle"
+    - combobox
+    - text: bill_issue_date
+    - img "minus-circle"
+    - combobox
+    - text: upload_date
+    - img "minus-circle"
+    - combobox
+    - text: sub_total
+    - img "minus-circle"
+    - combobox
+    - text: tax
+    - img "minus-circle"
+    - combobox
+    - text: total
+    - img "minus-circle"
+    - combobox
+    - text: currency
+    - img "minus-circle"
+    - button "+ Add Field"
+    - text: Containers
+    - button "plus Add Container":
+      - img "plus"
+      - text: Add Container
+    - img "close"
+    - text: "* Label"
+    - textbox "* Label": Supplier
+    - text: Add Divider
+    - checkbox "Add Divider" [checked]
+    - text: Direction
+    - radiogroup "segmented control":
+      - radio "Horizontal"
+      - text: Horizontal
+      - radio "Vertical" [checked]
+      - text: Vertical
+    - text: Fields
+    - combobox
+    - text: supplier_name
+    - img "minus-circle"
+    - combobox
+    - text: supplier_address
+    - img "minus-circle"
+    - combobox
+    - text: country
+    - img "minus-circle"
+    - button "+ Add Field"
+    - text: Containers
+    - button "plus Add Container":
+      - img "plus"
+      - text: Add Container
+    - img "close"
+    - text: "* Label"
+    - textbox "* Label": Payment
+    - text: Add Divider
+    - checkbox "Add Divider" [checked]
+    - text: Direction
+    - radiogroup "segmented control":
+      - radio "Horizontal"
+      - text: Horizontal
+      - radio "Vertical" [checked]
+      - text: Vertical
+    - text: Fields
+    - combobox
+    - text: payment_status
+    - img "minus-circle"
+    - combobox
+    - text: payment_method
+    - img "minus-circle"
+    - combobox
+    - text: due_date
+    - img "minus-circle"
+    - combobox
+    - text: payment_terms
+    - img "minus-circle"
+    - combobox
+    - text: payment_instructions
+    - img "minus-circle"
+    - combobox
+    - text: discount
+    - img "minus-circle"
+    - combobox
+    - text: notes
+    - img "minus-circle"
+    - button "+ Add Field"
+    - text: Containers
+    - button "plus Add Container":
+      - img "plus"
+      - text: Add Container
+    - img "close"
+    - button "plus Add Container":
+      - img "plus"
+      - text: Add Container
+    - text: Line Items
+    - combobox
+    - text: line_item_description
+    - img "minus-circle"
+    - combobox
+    - text: line_item_quantity
+    - img "minus-circle"
+    - combobox
+    - text: line_item_tax
+    - img "minus-circle"
+    - combobox
+    - text: line_item_unit_price
+    - img "minus-circle"
+    - text: line_item_unit_price
+    - combobox
+    - text: line_item_unit_price
+    - img "minus-circle"
+    - button "+ Add Line Item Field"
+    - text: Show
+    - switch "Show" [checked]:
+      - img "check"
+      - img "close"
+    - separator
+    - separator: Document
+    - text: Document Type
+    - combobox "Document Type" [disabled]
+    - text: Search to Select Source
+    - textbox "Source" [disabled]
+    - text: Bill ID
+    - textbox "Bill ID" [disabled]
+    - text: Bill Issue Date
+    - textbox "Bill Issue Date" [disabled]
+    - img "calendar"
+    - text: Upload Date
+    - textbox "Upload Date" [disabled]
+    - img "calendar"
+    - text: Subtotal
+    - textbox "Subtotal" [disabled]
+    - text: Tax Amount
+    - spinbutton "Tax Amount" [disabled]: "0"
+    - text: Grand Total
+    - spinbutton "Grand Total" [disabled]: "0"
+    - text: Currency
+    - combobox "Currency" [disabled]
+    - text: Search to Select
+    - separator: Supplier
+    - text: Supplier Name
+    - textbox "Supplier Name" [disabled]
+    - text: Supplier Address
+    - textbox "Supplier Address" [disabled]
+    - text: Country
+    - combobox "Country" [disabled]
+    - text: Search to Select
+    - separator: Payment
+    - text: Due Date
+    - textbox "Due Date" [disabled]
+    - img "calendar"
+    - text: Payment Terms
+    - textbox "Payment Terms" [disabled]
+    - text: Payment Instructions
+    - textbox "Payment Instructions" [disabled]
+    - text: Discount
+    - spinbutton "Discount" [disabled]: "0"
+    - text: Notes
+    - textbox "Notes" [disabled]
+    - separator: Line Items
+    - text: Description
+    - textbox "Description" [disabled]
+    - text: Quantity
+    - spinbutton "Quantity" [disabled]: "0"
+    - text: Tax
+    - spinbutton "Tax" [disabled]: "0"
+    - text: Unit Price
+    - spinbutton "Unit Price Unit Price" [disabled]: "0"
+    - text: Unit Price
+    - spinbutton "Enter value" [disabled]: "0"
+    - button "Remove" [disabled]
+    - button "Add Item" [disabled]
+```

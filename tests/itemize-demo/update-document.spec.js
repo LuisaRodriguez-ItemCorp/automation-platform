@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { login, page} from "../../globalPageSetup.js"
+import { login, ap, page} from "../../globalPageSetup.js"
 import { initElements } from '../../globalPageSetup.js';
 
 test('Upload Document via Demo Module @smoke', async ({ page }) => {
@@ -52,18 +52,12 @@ test('Upload Document via Demo Module @smoke', async ({ page }) => {
 test('Upload Document via AP module', async ({page})=>{
   await initElements(page); 
   await login.login();
-  await page.locator('.ant-avatar').first().click();
-  await page.locator('.ant-upload-select input[type="file"]').setInputFiles('C:\\Users\\luisa.alfonso\\OneDrive - Softgic\\VisualStudio Projects\\automation-platform\\test-data\\test-docs\\jetbrains Y2017_06.pdf');
-  await page.getByText('jetbrains Y2017_06').click();
+  await ap.navigateToAP();
+  await page.locator('.ant-upload-select input[type="file"]').setInputFiles('test-data/test-docs/jetbrains Y2017_06.pdf');
   await page.locator('div').filter({ hasText: 'jetbrains Y2017_06' }).nth(3).click();
   await expect(page.locator('body')).toMatchAriaSnapshot(`
     - img "check-circle"
     - text: jetbrains Y2017_06.pdf file uploaded successfully
     `);
   await expect( page.locator('table span.ant-tag-blue:has-text("Processing")').first()).toBeVisible();
-  const exportLink = page.getByRole('row').first().getByRole('link', { name: 'export' });
-  if (await exportLink.isVisible() && await exportLink.isEnabled()) {
-  console.log('Export link is clickable');
-  exportLink.click();
-  }
 });
