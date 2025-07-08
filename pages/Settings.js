@@ -1,4 +1,6 @@
-import { BasePage } from "./BasePage.js";
+import { BasePage } from "./BasePage.js"
+import { expect } from '@playwright/test';
+
 
 export class Settings extends BasePage{
 
@@ -38,6 +40,7 @@ export class Settings extends BasePage{
 
     async clickAddLineItem() {
         await this.addLineItemButton.click();
+        await this.page.locator('div').filter({ hasText: /^Field$/ }).nth(3).click();
     }
 
     async selectFirstFieldOption() {

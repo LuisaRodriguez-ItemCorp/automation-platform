@@ -1,4 +1,4 @@
-import { test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { login, settings } from '../../globalPageSetup.js';
 import { initElements } from '../../globalPageSetup.js';
 
