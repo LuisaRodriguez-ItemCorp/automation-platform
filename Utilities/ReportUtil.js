@@ -1,10 +1,10 @@
 import { chromium } from 'playwright';
-import { child_process} from 'child_process';
+import * as child_process from 'child_process';
 import path from 'path';
 
 (async () => {
   const port = 8888;
-  const reportDir = path.resolve(__dirname, 'allure-report');
+  const reportDir = ('allure-report');
 
   // Start a simple server
   const server = child_process.spawn('npx', ['http-server', reportDir, '-p', port], {
@@ -29,4 +29,4 @@ import path from 'path';
 
   await browser.close();
   server.kill();
-})();
+})()
