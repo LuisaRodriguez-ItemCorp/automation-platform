@@ -33,7 +33,21 @@ jobs:
       - name: Run Playwright tests headful mode
         run: xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' npx playwright test --headed
         continue-on-error: true
+      - name: Upload failed test screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failed-test-screenshots
+          path: test-results/**/*.png
+          if-no-files-found: ignore  # <- No errors even if no screenshots
 
+      - name: Upload failed test videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: failed-test-videos
+          path: test-results/**/*.webm
+          if-no-files-found: ignore
       - name: Install Allure CLI
         run: npm install -g allure-commandline --save-dev || true
 
