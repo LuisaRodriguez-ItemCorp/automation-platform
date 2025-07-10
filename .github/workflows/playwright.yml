@@ -30,8 +30,13 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        run: npx playwright test --grep '@smoke'
+      - name: Run Playwright tests headful mode
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          export DISPLAY=:99
+          nohup Xvfb :99 -screen 0 1920X1080X24 &
+          npx playwright test --headed
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline --save-dev || true
