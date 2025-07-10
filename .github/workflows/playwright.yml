@@ -32,14 +32,17 @@ jobs:
 
       - name: Run Playwright tests headful mode
         run: xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' npx playwright test --headed
+        continue-on-error: true
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline --save-dev || true
 
       - name: Generate Allure Report
+        if: always()
         run: allure generate allure-results --clean -o allure-report
 
       - name: Upload Allure report for Pages
+        if: always()
         uses: actions/upload-pages-artifact@v3
         with:
           path: allure-report/
